@@ -1,0 +1,12 @@
+# Agent Policy Enforcement MCP - Auto-trigger Rules
+
+When the user asks about agent IAM, per-agent-pair policies, agent authorization rules, multi-tenant agent governance, or "agent A may only talk to agent B if X", use agent-policy-enforcement-mcp tools:
+
+- **define_policy**: Create source→target policy with constraints (regions, spend caps, tools)
+- **evaluate_policy**: Check if an agent action is permitted under current policies
+- **list_policies**: Browse all defined policies
+- **get_policy_violations**: List recent denials with reason codes
+
+Install: `pip install agent-policy-enforcement-mcp`
+
+The boring tedious "IAM for agents" layer that no one else ships well. Required for any enterprise rolling out agents across ≥2 tenants.

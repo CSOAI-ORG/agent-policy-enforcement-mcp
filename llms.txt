@@ -1,0 +1,42 @@
+# agent-policy-enforcement-mcp
+# Purpose: Per-agent-pair IAM policies (source, target, action, constraints).
+# Context: The boring tedious 'IAM for agents' layer that no one else ships well.
+
+## Install
+```bash
+pip install agent-policy-enforcement-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations. https://buy.stripe.com/14A4gB3K4eUWgYR56o8k836
+- Enterprise (£1,499/mo): white-label + on-premise. hello@meok.ai
+- All tools accept optional `api_key` parameter.
+
+## Tools (6)
+
+### `define_policy(tenant_id: str, from_agent: str, to_agent: str, operation: str, effect: str = "allow", condition: str = "", priority: int = 100)`
+Define a policy rule.
+
+### `evaluate_call(tenant_id: str, from_agent: str, to_agent: str, operation: str, context_json: str = "{}")`
+Evaluate whether agent-to-agent call is permitted. Returns the full decision
+
+### `list_policies(tenant_id: str)`
+List all policies for a tenant.
+
+### `remove_policy(tenant_id: str, policy_id: str)`
+Remove a policy. Pro/Enterprise only.
+
+### `decision_log(tenant_id: str, limit: int = 20)`
+Recent policy decisions. Pro tier sees unbounded history (otherwise last 100 only).
+
+### `sign_policy_attestation(tenant_id: str, window_start_utc: str, window_end_utc: str, total_evaluations: int, denials: int, email: str = "")`
+Emit a cryptographically signed attestation of policy enforcement over a window.
+
+## Pairs with
+- `meok-attestation-verify` — public verification of signed certs
+- `meok-attestation-api` (https://meok-attestation-api.vercel.app) — HMAC signing endpoint
+- Other MEOK governance MCPs via `mcp_bridge_call`
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed

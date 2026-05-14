@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agent-policy-enforcement-mcp"
+version = "1.0.2"
+description = "Per-agent-pair IAM for A2A. Define policies ('orchestrator may call billing only when amount<1000'), gate every A2A call via evaluate_call. EU AI Act Art 14 + ISO 42001 Annex A.7 evidence with signed policy-decision attestations."
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "MEOK AI Labs", email = "hello@meok.ai"}]
+keywords = ['mcp', 'a2a', 'agent-to-agent', 'policy-enforcement', 'iam', 'authorization', 'eu-ai-act-art-14', 'iso-42001', 'signed-attestation', 'meok-ai-labs']
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent", "Topic :: Security"]
+dependencies = ["mcp>=1.0.0"]
+
+[project.urls]
+Homepage = "https://meok.ai/agent-policy-enforcement-mcp"
+Repository = "https://github.com/meok-ai-labs/agent-policy-enforcement-mcp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+only-include = ["server.py"]
+
+[project.scripts]
+agent-policy-enforcement-mcp = "server:main"
