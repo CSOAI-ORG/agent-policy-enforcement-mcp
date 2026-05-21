@@ -1,5 +1,12 @@
 # Agent Policy Enforcement MCP
 
+
+> ## Buy Starter — £29/mo
+> **Signed attestations + unlimited audits + email support.**
+> 👉 **[Subscribe at meok.ai](https://buy.stripe.com/00w28t94o5km38156o8k841)** — instant HMAC signing key + Stripe-managed billing.
+>
+> Free tier remains MIT-licensed and zero-config. Upgrade only when you need signed compliance artefacts for audit.
+
 [![PyPI](https://img.shields.io/pypi/v/agent-policy-enforcement-mcp)](https://pypi.org/project/agent-policy-enforcement-mcp/) [![Python](https://img.shields.io/pypi/pyversions/agent-policy-enforcement-mcp)](https://pypi.org/project/agent-policy-enforcement-mcp/)
 
 
@@ -57,5 +64,18 @@ The EU AI Act (Aug 2026), DORA (live), ISO 42001, and OWASP LLM01 Top-10 all dem
 ## License
 
 MIT — MEOK AI Labs, 2026.
+
+
+## Sister MCPs
+
+Part of the MEOK **A2a** pack — designed to work together as a fleet. Install the whole pack with `npx meok-setup --pack a2a`, or pick the ones you need:
+
+- **Prompt Injection Firewall** → `uvx agent-prompt-injection-firewall-mcp` · [PyPI](https://pypi.org/project/agent-prompt-injection-firewall-mcp/) · [GitHub](https://github.com/CSOAI-ORG/agent-prompt-injection-firewall-mcp)
+- **Data Residency** → `uvx agent-data-residency-mcp` · [PyPI](https://pypi.org/project/agent-data-residency-mcp/) · [GitHub](https://github.com/CSOAI-ORG/agent-data-residency-mcp)
+- **Certified Handoff** → `uvx agent-handoff-certified-mcp` · [PyPI](https://pypi.org/project/agent-handoff-certified-mcp/) · [GitHub](https://github.com/CSOAI-ORG/agent-handoff-certified-mcp)
+- **Audit Logger** → `uvx agent-audit-logger-mcp` · [PyPI](https://pypi.org/project/agent-audit-logger-mcp/) · [GitHub](https://github.com/CSOAI-ORG/agent-audit-logger-mcp)
+- **Rate Limiter** → `uvx agent-rate-limiter-mcp` · [PyPI](https://pypi.org/project/agent-rate-limiter-mcp/) · [GitHub](https://github.com/CSOAI-ORG/agent-rate-limiter-mcp)
+
+Full catalogue + Anthropic Registry verify links: [meok.ai/anthropic-registry](https://meok.ai/anthropic-registry)
 
 <!-- mcp-name: io.github.CSOAI-ORG/agent-policy-enforcement-mcp -->
