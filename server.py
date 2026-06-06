@@ -54,7 +54,7 @@ except ImportError:
             return True, "OK", "pro"
         if _MEOK_API_KEY and api_key and api_key != _MEOK_API_KEY:
             return False, "Invalid API key. Get one at https://meok.ai/api-keys", "free"
-        return True, "OK", "free"
+        return True, "OK, Pro at https://www.csoai.org/checkout", "free"
 
 
 try:
@@ -72,8 +72,8 @@ def check_access(api_key: str = ""):
     return _shared_check_access(api_key)
 
 
-STRIPE_199 = "https://buy.stripe.com/14A4gB3K4eUWgYR56o8k836"
-STRIPE_1499 = "https://buy.stripe.com/4gM9AV80kaEG0ZT42k8k837"
+STRIPE_199 = "https://buy.stripe.com/14AfZjfsM6oq7oh2Yg8k90P"
+STRIPE_1499 = "https://buy.stripe.com/14AfZjfsM6oq7oh2Yg8k90P"
 FREE_DAILY_LIMIT = 100
 FREE_POLICY_LIMIT = 10
 
