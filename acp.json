@@ -1,0 +1,24 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "agent-policy-enforcement-mcp",
+    "description": "Per-agent-pair IAM for A2A. Define policies ('orchestrator may call billing only when amount<100...",
+    "version": "1.0.5",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "agent-policy-enforcement-mcp"
+      }
+    ],
+    "capabilities": [
+      "define_policy",
+      "evaluate_call",
+      "list_policies",
+      "remove_policy",
+      "decision_log",
+      "sign_policy_attestation"
+    ]
+  }
+}

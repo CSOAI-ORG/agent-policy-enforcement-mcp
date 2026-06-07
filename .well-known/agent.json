@@ -1,0 +1,77 @@
+{
+  "name": "agent-policy-enforcement-mcp",
+  "description": "Per-agent-pair IAM for A2A. Define policies ('orchestrator may call billing only when amount<100...",
+  "url": "https://proofof.ai/scorecard/agent-policy-enforcement-mcp.html",
+  "version": "1.0.5",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "define_policy",
+      "name": "Define Policy",
+      "description": "define_policy via agent-policy-enforcement-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "evaluate_call",
+      "name": "Evaluate Call",
+      "description": "evaluate_call via agent-policy-enforcement-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "list_policies",
+      "name": "List Policies",
+      "description": "list_policies via agent-policy-enforcement-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "remove_policy",
+      "name": "Remove Policy",
+      "description": "remove_policy via agent-policy-enforcement-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "decision_log",
+      "name": "Decision Log",
+      "description": "decision_log via agent-policy-enforcement-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "sign_policy_attestation",
+      "name": "Sign Policy Attestation",
+      "description": "sign_policy_attestation via agent-policy-enforcement-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
