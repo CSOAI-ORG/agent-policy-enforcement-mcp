@@ -1,3 +1,5 @@
+[![MCP Scorecard: 78/100](https://img.shields.io/badge/proofof.ai-78%2F100-5b21b6)](https://proofof.ai/scorecard/agent-policy-enforcement-mcp.html)
+
 # Agent Policy Enforcement MCP
 
 [![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
