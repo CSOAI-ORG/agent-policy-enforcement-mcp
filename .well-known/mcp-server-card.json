@@ -1,0 +1,31 @@
+{
+  "name": "agent-policy-enforcement-mcp",
+  "title": "Agent Policy Enforcement Mcp",
+  "description": "Per-agent-pair IAM for A2A. Define policies ('orchestrator may call billing only when amount<1000'), gate every A2A call via evaluate_call. EU AI Act Art 14 + ISO 42001 Annex A.7 evidence with signed policy-decision attestations.",
+  "version": "1.0.5",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "define_policy"
+    },
+    {
+      "name": "evaluate_call"
+    },
+    {
+      "name": "list_policies"
+    },
+    {
+      "name": "remove_policy"
+    },
+    {
+      "name": "decision_log"
+    },
+    {
+      "name": "sign_policy_attestation"
+    }
+  ]
+}

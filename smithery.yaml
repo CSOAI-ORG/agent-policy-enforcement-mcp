@@ -1,0 +1,33 @@
+name: agent-policy-enforcement-mcp
+description: 'MCP server: agent-policy-enforcement-mcp'
+version: 1.0.5
+author: MEOK AI Labs
+homepage: https://safetyof.ai
+repository: https://github.com/MEOK-AI-Labs/agent-policy-enforcement-mcp
+license: MIT
+categories:
+- compliance
+- governance
+tools:
+- name: define_policy
+  description: Define a policy rule.
+- name: evaluate_call
+  description: Evaluate whether agent-to-agent call is permitted. Returns the full
+    decision
+- name: list_policies
+  description: List all policies for a tenant.
+- name: remove_policy
+  description: Remove a policy. Pro/Enterprise only.
+- name: decision_log
+  description: Recent policy decisions. Pro tier sees unbounded history (otherwise
+    last 100 only).
+- name: sign_policy_attestation
+  description: Emit a cryptographically signed attestation of policy enforcement over
+    a window.
+build:
+  type: python
+  entrypoint: server.py
+  dependencies:
+  - mcp>=1.0.0
+runtime:
+  python: '>=3.10'
