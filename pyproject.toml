@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agent-policy-enforcement-mcp"
-version = "1.0.5"
+version = "1.0.8"
 description = "Per-agent-pair IAM for A2A. Define policies ('orchestrator may call billing only when amount<1000'), gate every A2A call via evaluate_call. EU AI Act Art 14 + ISO 42001 Annex A.7 evidence with signed policy-decision attestations."
 license = {file = "LICENSE"}
 readme = "README.md"
@@ -20,7 +20,7 @@ Repository = "https://github.com/CSOAI-ORG/agent-policy-enforcement-mcp"
 
 [tool.hatch.build.targets.wheel]
 packages = ["."]
-only-include = ["server.py"]
+only-include = ["auth_middleware.py", "server.py"]
 
 [project.scripts]
 agent-policy-enforcement-mcp = "server:main"
