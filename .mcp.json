@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "agent-policy-enforcement-mcp": {
+      "command": "uvx",
+      "args": [
+        "agent-policy-enforcement-mcp"
+      ]
+    }
+  }
+}
