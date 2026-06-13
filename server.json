@@ -1,28 +1,83 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.CSOAI-ORG/agent-policy-enforcement-mcp",
-  "version": "1.0.8",
-  "description": "Per-agent-pair IAM for A2A. Define policies ('orchestrator may call billing only when amount<100...",
+  "name": "CSOAI-ORG/agent-policy-enforcement-mcp",
+  "title": "Policy Enforcement",
+  "version": "1.2.3",
+  "description": "Runtime policy enforcement for agent behavior and tool restrictions. Part of the MEOK 28-hive MCP governance mesh. 13 unified frameworks + attestation chain.",
+  "websiteUrl": "https://meok.ai/agent-policy-enforcement-mcp",
   "repository": {
+    "type": "git",
     "url": "https://github.com/CSOAI-ORG/agent-policy-enforcement-mcp",
-    "source": "github",
-    "id": "1238513628"
+    "source": "https://github.com/CSOAI-ORG/agent-policy-enforcement-mcp"
   },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/CSOAI-ORG/agent-policy-enforcement-mcp/main/assets/icon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "256x256"
+      ],
+      "theme": "dark"
+    }
+  ],
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "agent-policy-enforcement-mcp",
-      "version": "1.0.8",
-      "runtimeHint": "python",
+      "version": "1.2.3",
       "transport": {
         "type": "stdio"
       }
     }
   ],
-  "remotes": [
-    {
-      "type": "streamable-http",
-      "url": "https://api.meok.ai/v1/a2a/policy-enforcement"
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "category": "ai-governance",
+      "subcategories": [
+        "compliance",
+        "audit"
+      ],
+      "tier": "flagship",
+      "openSsfScorecard": "7.06/10"
     }
+  },
+  "metadata": {
+    "publisher": "MEOK AI Labs",
+    "categories": [
+      "compliance",
+      "ai-governance"
+    ]
+  },
+  "examples": [
+    {
+      "name": "Quick scan via agent-policy-enforcement-mcp",
+      "description": "Run a compliance check using the MCP server.",
+      "input": {
+        "tool": "quick_scan",
+        "arguments": {
+          "system": "example"
+        }
+      }
+    }
+  ],
+  "resources": [
+    {
+      "uri": "https://docs.meok.ai/agent-policy-enforcement-mcp/",
+      "name": "agent-policy-enforcement-mcp documentation",
+      "mimeType": "text/html"
+    },
+    {
+      "uri": "https://github.com/CSOAI-ORG/agent-policy-enforcement-mcp",
+      "name": "agent-policy-enforcement-mcp on GitHub",
+      "mimeType": "text/html"
+    }
+  ],
+  "publisher": {
+    "name": "CSOAI Ltd",
+    "url": "https://csoai.org"
+  },
+  "categories": [
+    "compliance",
+    "ai-governance"
   ]
 }
