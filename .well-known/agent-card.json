@@ -1,0 +1,134 @@
+{
+  "name": "Agent Policy Enforcement Mcp",
+  "version": "1.0.5",
+  "url": "https://mcp.meok.ai/agent-policy-enforcement-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "Per-agent-pair IAM for A2A. Define policies ('orchestrator may call billing only when amount<1000'), gate every A2A call via evaluate_call. EU AI Act Art 14 + ISO 42001 Annex A.7 evidence with signed policy-decision attestations.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "define_policy",
+      "name": "Define Policy",
+      "description": "Define Policy — a tool of the agent-policy-enforcement-mcp MCP.",
+      "tags": [
+        "agent",
+        "a2a"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "evaluate_call",
+      "name": "Evaluate Call",
+      "description": "Evaluate Call — a tool of the agent-policy-enforcement-mcp MCP.",
+      "tags": [
+        "agent",
+        "a2a"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "list_policies",
+      "name": "List Policies",
+      "description": "List Policies — a tool of the agent-policy-enforcement-mcp MCP.",
+      "tags": [
+        "agent",
+        "a2a"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "remove_policy",
+      "name": "Remove Policy",
+      "description": "Remove Policy — a tool of the agent-policy-enforcement-mcp MCP.",
+      "tags": [
+        "agent",
+        "a2a"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "decision_log",
+      "name": "Decision Log",
+      "description": "Decision Log — a tool of the agent-policy-enforcement-mcp MCP.",
+      "tags": [
+        "agent",
+        "a2a"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "sign_policy_attestation",
+      "name": "Sign Policy Attestation",
+      "description": "Sign Policy Attestation — a tool of the agent-policy-enforcement-mcp MCP.",
+      "tags": [
+        "agent",
+        "a2a"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "agent-policy-enforcement-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
