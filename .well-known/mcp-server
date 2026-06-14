@@ -1,0 +1,5 @@
+{
+  "name": "agent-policy-enforcement-mcp",
+  "description": "Runtime policy enforcement for agent behavior and tool restrictions.",
+  "version": "1.2.3"
+}
