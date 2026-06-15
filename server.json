@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.CSOAI-ORG/agent-policy-enforcement-mcp",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Per-agent-pair IAM for A2A. Define policies ('orchestrator may call billing only when amount<100...",
   "repository": {
     "url": "https://github.com/CSOAI-ORG/agent-policy-enforcement-mcp",
@@ -12,7 +12,7 @@
     {
       "registryType": "pypi",
       "identifier": "agent-policy-enforcement-mcp",
-      "version": "1.0.8",
+      "version": "1.0.9",
       "runtimeHint": "python",
       "transport": {
         "type": "stdio"

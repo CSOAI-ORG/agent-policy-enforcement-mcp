@@ -140,3 +140,28 @@ buyers can deploy without vendor-lock-in objections.
 
 <!-- BUY-LADDER:END -->
 
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "agent-policy-enforcement-mcp": {
+      "command": "uvx",
+      "args": ["agent-policy-enforcement-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install agent-policy-enforcement-mcp` then run the `agent-policy-enforcement-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `define_policy` to …"
+- "Use `evaluate_call` to …"
+- "Use `list_policies` to …"
