@@ -21,8 +21,6 @@ USE CASES:
 
 PRICING:
   - Free — 100 policy evaluations/day, 10 policies per tenant
-  - Pro £199/mo — unlimited + signed policy-decision attestations
-  - Enterprise £1,499/mo — multi-tenant + custom predicate DSL + SIEM push
 
 Install: pip install agent-policy-enforcement-mcp
 Run:     python server.py
@@ -72,8 +70,8 @@ def check_access(api_key: str = ""):
     return _shared_check_access(api_key)
 
 
-STRIPE_199 = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"
-STRIPE_1499 = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"
+STRIPE_199 = "https://meok.ai/pricing"
+STRIPE_1499 = "https://meok.ai/pricing"
 FREE_DAILY_LIMIT = 100
 FREE_POLICY_LIMIT = 10
 
@@ -272,7 +270,7 @@ def evaluate_call(
         "decision": decision,
         "decisive_policy_id": decisive_policy,
         "matched_policies": matches,
-        "upsell_pro": f"Pro £199/mo unlocks unlimited + signed decision attestations: {STRIPE_199}" if tier == "free" else None,
+        "upsell_pro": f"Pro a per-job quote unlocks unlimited + signed decision attestations: {STRIPE_199}" if tier == "free" else None,
     }, indent=2)
 
 
@@ -296,7 +294,7 @@ def remove_policy(tenant_id: str, policy_id: str, api_key: str = "") -> str:
     if not allowed_acc:
         return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if tier == "free":
-        return json.dumps({"error": "Policy removal requires Pro (£199/mo).", "upgrade_url": STRIPE_199})
+        return json.dumps({"error": "Policy removal requires Pro.", "upgrade_url": STRIPE_199})
     before = len(_policies[tenant_id])
     _policies[tenant_id] = [p for p in _policies[tenant_id] if p["policy_id"] != policy_id]
     return json.dumps({"removed": before > len(_policies[tenant_id]), "remaining": len(_policies[tenant_id])})
@@ -330,7 +328,7 @@ def sign_policy_attestation(
     if not allowed_acc:
         return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if tier == "free":
-        return json.dumps({"error": "Signed attestations require Pro (£199/mo).", "upgrade_url": STRIPE_199})
+        return json.dumps({"error": "Signed attestations require Pro.", "upgrade_url": STRIPE_199})
 
     deny_rate = 100 * denials / max(1, total_evaluations)
     findings = [
@@ -377,10 +375,10 @@ if __name__ == "__main__":
     main()
 
 
-# ── MEOK monetization layer (Stripe upgrade · PAYG · pricing) ──────────
-# Free tier is zero-config. Upgrade to Pro (unlimited) or pay-as-you-go per call.
+# ── MEOK pricing pointer (pay per delivered job; no subscriptions) ──────────
+# No tiers. Jobs are quoted individually at https://meok.ai/pricing.
 import os as _meok_os
-MEOK_STRIPE_UPGRADE = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"  # Pro (unlimited)
+MEOK_STRIPE_UPGRADE = "https://meok.ai/pricing"  # Pro (unlimited)
 MEOK_PAYG_KEY = _meok_os.environ.get("MEOK_PAYG_KEY", "")  # set to enable PAYG (x402 / ~GBP0.05 per call)
 MEOK_PRICING = "https://meok.ai/pricing"
 
